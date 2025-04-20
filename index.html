@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Тренажёр умножения</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="auth-screen">
+        <h1>Тренажёр умножения</h1>
+        <div id="auth-form">
+            <h2>Вход</h2>
+            <input type="text" id="username" placeholder="Логин">
+            <input type="password" id="password" placeholder="Пароль">
+            <button id="login-btn">Войти</button>
+            <button id="register-btn">Регистрация</button>
+            <button id="guest-btn">Продолжить как гость</button>
+        </div>
+    </div>
+
+    <div id="app-content" style="display: none;">
+        <div class="header">
+            <button id="profile-btn" class="nav-btn">Профиль</button>
+            <button id="logout-btn" class="nav-btn">Выйти</button>
+        </div>
+    
+        <div class="mode-selector">
+            <label>
+                Режим:
+                <label><input type="radio" name="mode" value="on"> На</label>
+                <label><input type="radio" name="mode" value="до"> До</label>
+                <select id="number">
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                </select>
+            </label>
+        </div>
+    
+        <div id="examples-container">
+            <div id="examples"></div>
+            <div class="buttons">
+                <button id="check-btn">Проверить</button>
+                <button id="next-btn" style="display: none;">Далее</button>
+                <button id="repeat-btn" style="display: none;">Повторить</button>
+            </div>
+            <div id="result"></div>
+        </div>
+    </div>
+
+    <div id="profile-content" style="display: none;">
+        <div class="profile-header">
+            <h2>Профиль</h2>
+            <p>Имя: <span id="profile-username"></span></p>
+            <p>Уровень: <span id="profile-level"></span></p>
+            <div class="stats">
+                <p>Всего решено: <span id="total-score">0</span> примеров</p>
+            </div>
+            <div class="achievements">
+                <h3>Достижения</h3>
+                <div id="achievements-list"></div>
+            </div>
+            <button id="back-btn">Назад</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
